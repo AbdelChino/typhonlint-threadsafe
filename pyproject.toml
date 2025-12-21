@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typhonlint-threadsafe"
+version = "2025.12.21130210"
+description = "A new package that analyzes user-provided JavaScript code snippets to determine if they can run concurrently without conflicts or race conditions. It takes the code as text input and returns a structu"
+readme = "README.md"
+authors = [{ name = "typhonlint-threadsafe", email = "hi@eugene.plus" }]
+requires-python = ">=3.9"
+dependencies = [
+  "langchain-llm7>=0.0.0",
+  "llmatch-messages>=0.0.0",
+  "langchain-core>=0.3.0",
+]
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/chigwell/typhonlint-threadsafe"
